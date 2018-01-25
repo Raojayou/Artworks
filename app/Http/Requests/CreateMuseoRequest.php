@@ -42,13 +42,13 @@ class CreateMuseoRequest extends FormRequest
         // Se espeficican los mensajes de validación para las reglas definidas
         // en el método rules de esta clase.
         return [
-            'name.required' => 'Es necesario completar el campo nombre',
-            'horario.required' => 'Es necesario completar el campo imagen',
-            'web.required' => 'Es necesario completar los campos latitud y longitud',
-            'social.required' => 'Es necesario completar el campo tema',
-            'type.required' => 'Es necesario completar el campo fecha',
-            'period.required' => 'Es necesario completar el campo duracion',
-            'description.required' => 'Es necesario completar el campo edad',
+            'name.required' => 'Es necesario completar el campo Nombre del Museo.',
+            'horario.required' => 'Es necesario completar el campo Horario.',
+            'web.required' => 'Es necesario completar el campo Página Web.',
+            'social.required' => 'Es necesario completar el campo Redes Sociales',
+            'type.required' => 'Es necesario completar el campo Tipo de Museo',
+            'period.required' => 'Es necesario completar el campo Época de las Obras.',
+            'description.required' => 'Es necesario completar el campo Descripción.',
         ];
     }
 }
