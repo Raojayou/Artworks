@@ -1,0 +1,14 @@
+.ng {
+    font-weight:bold;
+}
+
+.museo{
+    padding: 50px;
+}
+ul.navbar-nav {
+    padding: 10px;
+}
+
+ul.navbar-nav a {
+    padding-left: 40px;
+}
