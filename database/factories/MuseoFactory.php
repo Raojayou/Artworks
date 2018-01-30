@@ -14,7 +14,7 @@ $factory->define(App\Museo::class, function (Faker $faker) {
         'social' => $faker->word,
         'type'=> $faker->word,
         'period' => $faker->word,
-        'description' => $faker->realText(255),
+        'description' => $faker->realText(200),
         'created_at' => ($time1 < $time2) ? $time1 : $time2,
         'updated_at' => ($time1 > $time2) ? $time1 : $time2
     ];

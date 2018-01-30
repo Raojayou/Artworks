@@ -27,9 +27,10 @@ class CreateUserRequest extends FormRequest
             'name' => 'required|string|max:50',
             'lastName' => 'required|string|max:50',
             'username' => 'required|string|max:50|unique:users',
+            'email' => 'required|max:50|email|unique:users',
             'phone' => 'required|numeric|max:12',
             'website' => 'required|string|confirmed',
-            'about' => 'required|string|max:255'
+            'about' => 'required|string|max:200'
         ];
     }
 
@@ -55,6 +56,11 @@ class CreateUserRequest extends FormRequest
             'username.max' => 'Has sobrepasado los 50 caracteres disponibles para el "Nombre de Usuario".',
             'username.string' => 'El nombre de usuario debe ser una cadena de caracteres.',
 
+            'email.required' => 'Es necesario completar el campo "email".',
+            'email.max' => 'Has sobrepasado los 50 caracteres disponibles para el "email".',
+            'email.email' => 'El email debe ser un email válido.',
+            'email.unique' => 'El email debe ser un email disponible.',
+
             'phone.required' => 'Es necesario completar el campo "móvil".',
             'phone.max' => 'Has sobrepasado los 12 caracteres disponibles para el "móvil".',
             'phone.numeric' => 'El móvil debe ser un móvil válido.',
@@ -63,7 +69,7 @@ class CreateUserRequest extends FormRequest
 
             'about.required' => 'La descripción es obligatoria.',
             'about.string' => 'La descripción debe ser una cadena de caracteres',
-            'about.max' => 'La descripción debe tener 255 caracter como máximo',
+            'about.max' => 'La descripción debe tener 200 caracter como máximo',
         ];
     }
 }
