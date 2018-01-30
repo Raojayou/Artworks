@@ -114,7 +114,7 @@
                                     <textarea id="description" class="form-control" name="description" rows="5" autofocus></textarea>
 
                                     @if($errors->has('description'))
-                                        @foreach($errors->get('descritcion') as $message)
+                                        @foreach($errors->get('description') as $message)
                                             <div class="alert alert-danger" role="alert">
                                                 {{ $message }}
                                             </div>

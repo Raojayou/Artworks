@@ -20,7 +20,11 @@
 
                     <div>
                         <h4 class="ng">
-                            Horario: {{ $museo['horario'] }}
+                            Horario de Apertura: {{ $museo['horario_apertura'] }}
+                        </h4>
+
+                        <h4 class="ng">
+                            Horario de Cierre: {{ $museo['horario_cierre'] }}
                         </h4>
                     </div>
                     <div>

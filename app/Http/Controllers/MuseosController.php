@@ -42,7 +42,8 @@ class MuseosController extends Controller
     public function store(CreateMuseoRequest $request){
         Museo::create([
             'name' => $request->input('name'),
-            'horario' => $request->input('horario'),
+            'horario_apertura' => $request->input('horario_apertura'),
+            'horario_cierre' => $request->input('horario_cierre'),
             'web' => $request->input('web'),
             'social' => $request->input('social'),
             'type' => $request->input('type'),

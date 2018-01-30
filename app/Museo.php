@@ -12,4 +12,9 @@ class Museo extends Model
     // Con $guarded se indican explícitamente los campos de la tabla
     // que NO se podrán modificar programáticamente.
     protected $guarded = ['id', 'created_at', 'updated_at'];
+
+    public function user(){
+        // Muestra el autor del museo.
+        return $this->belongsTo(User::class);
+    }
 }
