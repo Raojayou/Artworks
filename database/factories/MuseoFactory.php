@@ -8,8 +8,8 @@ $factory->define(App\Museo::class, function (Faker $faker) {
     $time2 = Carbon::createFromTimestamp($faker->dateTimeThisDecade()->getTimestamp());
     return [
         'name' =>$faker->domainWord,
-        'horario_apertura'=> $faker->randomDigit(min(6),max(12)),
-        'horario_cierre'=> $faker->randomDigit(min(18),max(24)),
+        'horario_apertura'=> $faker->numberBetween(6,12),
+        'horario_cierre'=> $faker->numberBetween(18,24),
         'web' => $faker->url,
         'social' => $faker->word,
         'type'=> $faker->word,
@@ -19,7 +19,3 @@ $factory->define(App\Museo::class, function (Faker $faker) {
         'updated_at' => ($time1 > $time2) ? $time1 : $time2
     ];
 });
-
-
-
-

@@ -27,14 +27,29 @@
                                 </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('horario') ? ' has-error' : '' }}">
-                                <label for="horario" class="col-md-4 control-label">Horario</label>
+                            <div class="form-group{{ $errors->has('horario_apertura') ? ' has-error' : '' }}">
+                                <label for="horario_apertura" class="col-md-4 control-label">Horario de Apertura</label>
 
                                 <div class="col-md-6">
-                                    <input id="horario" type="text" class="form-control" name="horario" value="{{ old('horario') }}" autofocus>
+                                    <input id="horario_apertura" type="text" class="form-control" name="horario_apertura" value="{{ old('horario_apertura') }}" autofocus>
 
-                                    @if($errors->has('horario'))
-                                        @foreach($errors->get('horario') as $message)
+                                    @if($errors->has('horario_apertura'))
+                                        @foreach($errors->get('horario_apertura') as $message)
+                                            <div class="alert alert-danger" role="alert">
+                                                {{ $message }}
+                                            </div>
+                                        @endforeach
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="form-group{{ $errors->has('horario_cierre') ? ' has-error' : '' }}">
+                                <label for="horario_cierre" class="col-md-4 control-label">Horario de Cierre</label>
+
+                                <div class="col-md-6">
+                                    <input id="horario_cierre" type="text" class="form-control" name="horario_cierre" value="{{ old('horario_cierre') }}" autofocus>
+
+                                    @if($errors->has('horario_cierre'))
+                                        @foreach($errors->get('horario_cierre') as $message)
                                             <div class="alert alert-danger" role="alert">
                                                 {{ $message }}
                                             </div>

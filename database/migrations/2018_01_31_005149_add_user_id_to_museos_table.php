@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateIndexInMuseoTable extends Migration
+class AddUserIdToMuseosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,8 @@ class CreateIndexInMuseoTable extends Migration
     public function up()
     {
         Schema::table('museos', function (Blueprint $table) {
-            //
+            $table->integer('user_id')->unsigned()->after('id');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -25,8 +26,9 @@ class CreateIndexInMuseoTable extends Migration
      */
     public function down()
     {
-        Schema::table('museo', function (Blueprint $table) {
-            //
+        Schema::table('museos', function (Blueprint $table) {
+            $table->dropForeign('museos_user_id_foreign');
+            $table->dropColumn('user_id');
         });
     }
 }
