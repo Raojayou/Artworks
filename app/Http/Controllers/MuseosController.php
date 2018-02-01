@@ -19,7 +19,8 @@ class MuseosController extends Controller
      */
     public function show(Museo $museo)
     {
-        return view('museo.show', [
+        $museo = Museo::orderBy('created_at', 'desc')->paginate(10);
+        return view('museos.show', [
             'museo' => $museo
         ]);
     }
@@ -30,7 +31,7 @@ class MuseosController extends Controller
      */
     public function create()
     {
-        return view('museo.create');
+        return view('museos.create');
     }
     /**
      * Guarda en la base de datos la información facilitada para un nuevo museo.
@@ -40,6 +41,9 @@ class MuseosController extends Controller
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function store(CreateMuseoRequest $request){
+
+        $user = $request->user();
+
         Museo::create([
             'name' => $request->input('name'),
             'horario_apertura' => $request->input('horario_apertura'),

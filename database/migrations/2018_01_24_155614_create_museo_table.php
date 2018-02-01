@@ -15,14 +15,14 @@ class CreateMuseoTable extends Migration
     {
         Schema::create('museos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('name')->unique();
             $table->text('horario_apertura');
             $table->text('horario_cierre');
             $table->string('web');
             $table->string('social');
             $table->string('type');
-            $table->string('period');
-            $table->text('description');
+            $table->string('period')->nullable();;
+            $table->text('description')->nullable();;
             $table->timestamps();
         });
     }
@@ -34,6 +34,6 @@ class CreateMuseoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('museo');
+        Schema::dropIfExists('museos');
     }
 }

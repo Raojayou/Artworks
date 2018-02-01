@@ -1,27 +1,24 @@
 <?php
+
 namespace App\Http\Controllers;
 
-use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class UsersController extends Controller
+class ProfileController extends Controller
 {
     /**
-     * Muestra los museos creados por los usuarios
+     * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($username)
+    public function index()
     {
-        $user = User::where('username',$username)->first();
-        $museos = $user->museos()->latest()->paginate(10);
-
-        return view('users.index', [
-            'museos' => $museos,
-            'user'      => $user,
+        $user = Auth::user();
+        return view('users.profile', [
+            'user' => $user
         ]);
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -31,6 +28,7 @@ class UsersController extends Controller
     {
         //
     }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -41,6 +39,7 @@ class UsersController extends Controller
     {
         //
     }
+
     /**
      * Display the specified resource.
      *
@@ -51,6 +50,7 @@ class UsersController extends Controller
     {
         //
     }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -61,6 +61,7 @@ class UsersController extends Controller
     {
         //
     }
+
     /**
      * Update the specified resource in storage.
      *
@@ -72,6 +73,7 @@ class UsersController extends Controller
     {
         //
     }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -81,17 +83,5 @@ class UsersController extends Controller
     public function destroy($id)
     {
         //
-    }
-    /**
-     * Muestra el perfil del usuario
-     *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function profile()
-    {
-        $user = Auth::user();
-        return view('users.profile', [
-            'user' => $user,
-        ]);
     }
 }

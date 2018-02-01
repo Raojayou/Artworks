@@ -31,4 +31,8 @@ class User extends Authenticatable
         // Relación [1 a n].
         return $this->hasMany(Museo::class);
     }
+
+    public function profile(){
+        return $this->hasOne(User::class);
+    }
 }
