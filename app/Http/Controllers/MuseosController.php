@@ -11,7 +11,7 @@ class MuseosController extends Controller
 {
     /**
      * Método que muestra la información de un mensaje. Utiliza Route Binding
-     * para conseguir el museo facilitado por el parámetro.
+     * para conseguir el museos facilitado por el parámetro.
      *
      * @param Museo $museo
      *
@@ -21,11 +21,11 @@ class MuseosController extends Controller
     {
         $museo = Museo::orderBy('created_at', 'desc')->paginate(10);
         return view('museos.show', [
-            'museo' => $museo
+            'museos' => $museo
         ]);
     }
     /**
-     * Método para mostrar el formulario de alta de una nuevo museo.
+     * Método para mostrar el formulario de alta de una nuevo museos.
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
@@ -34,7 +34,7 @@ class MuseosController extends Controller
         return view('museos.create');
     }
     /**
-     * Guarda en la base de datos la información facilitada para un nuevo museo.
+     * Guarda en la base de datos la información facilitada para un nuevo museos.
      * Utiliza la definición personalizada de un Request para validar los datos.
      *
      * @param CreateMuseoRequest $request
@@ -45,6 +45,7 @@ class MuseosController extends Controller
         $user = $request->user();
 
         Museo::create([
+            'user_id'   => $user->id,
             'name' => $request->input('name'),
             'horario_apertura' => $request->input('horario_apertura'),
             'horario_cierre' => $request->input('horario_cierre'),

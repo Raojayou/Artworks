@@ -13,9 +13,9 @@
 
 Route::get('/', 'PagesController@home');
 
-Route::get('/museo/create', 'MuseosController@create')->middleware('auth');
-Route::get('/museo/show/{museo}', 'MuseosController@show');
-Route::post('/museo/create', 'MuseosController@store')->middleware('auth');
+Route::get('/museos/create', 'MuseosController@create')->middleware('auth');
+Route::get('/museos/show/{museos}', 'MuseosController@show');
+Route::post('/museos/create', 'MuseosController@store')->middleware('auth');
 
 Route::get('/user/{username}', 'UsersController@index');
 Route::get('/profile', 'ProfileController@profile')->middleware('auth');
@@ -23,3 +23,8 @@ Route::get('/profile', 'ProfileController@profile')->middleware('auth');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+

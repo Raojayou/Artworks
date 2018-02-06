@@ -8,7 +8,7 @@
                     <div class="panel-heading">Añadir Museo</div>
 
                     <div class="panel-body">
-                        <form action="{{ url('/') }}/museo/create" method="post" class="form-horizontal">
+                        <form action="{{ url('/') }}/museos/create" method="post" class="form-horizontal">
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">

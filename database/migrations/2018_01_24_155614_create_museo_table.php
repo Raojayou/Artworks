@@ -16,8 +16,8 @@ class CreateMuseoTable extends Migration
         Schema::create('museos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
-            $table->text('horario_apertura');
-            $table->text('horario_cierre');
+            $table->time('horario_apertura');
+            $table->time('horario_cierre');
             $table->string('web');
             $table->string('social');
             $table->string('type');

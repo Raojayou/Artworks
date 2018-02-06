@@ -24,8 +24,8 @@ class CreateMuseoRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:50',
-            'horario_apertura' => 'required|numeric|',
-            'horario_cierre' => 'required|numeric|',
+            'horario_apertura' => 'required',
+            'horario_cierre' => 'required',
             'web' => 'required',
             'social' => 'required',
             'type' => 'required|string|max:25',
@@ -57,7 +57,7 @@ class CreateMuseoRequest extends FormRequest
             'social.required' => 'Es necesario completar el campo Redes Sociales',
 
             'type.required' => 'Es necesario completar el campo Tipo de Museo',
-            'type.string' => 'El tipo de museo debe ser una cadena de caracteres.',
+            'type.string' => 'El tipo de museos debe ser una cadena de caracteres.',
             'type.max' => 'Has sobrepasado los 25 caracteres disponibles para el "Tipo de Museo".',
 
             'period.required' => 'Es necesario completar el campo Época de las Obras.',
