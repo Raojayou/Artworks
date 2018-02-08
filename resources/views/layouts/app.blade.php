@@ -18,7 +18,7 @@
 <div id="app">
     <nav class="navbar navbar-expand-lg navbar-light color-fondo">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}"><img class="img" src="{{ asset('sparta.jpg') }}" id="logo"/></a>
+            <a class="navbar-brand" href="{{ url('/') }}"><img class="img" src="{{ asset('logo.jpg') }}" id="logo"/></a>
             <a class="navbar-brand" href="{{ url('/') }}">
                 {{ config('app.name', 'Artworks') }}
             </a>
@@ -32,7 +32,7 @@
                     
                     @auth()
                         <li class="nav-item active"><a href="{{ url('/') }}/museos/create" class="nav-link">Añadir Museo</a></li>
-                        <li class="nav-item active"><a href="{{ url('/') }}/profile" class="nav-link">Perfil</a></li>
+                        <li class="nav-item active"><a href="{{ url('/') }}/obras/create" class="nav-link">Añadir Obra</a></li>
                     @endauth
                 </ul>
             </div>

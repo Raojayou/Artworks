@@ -19,7 +19,7 @@ class UsersController extends Controller
 
         return view('users.index', [
             'museos' => $museos,
-            'user'      => $user,
+            'user'   => $user,
         ]);
     }
     /**

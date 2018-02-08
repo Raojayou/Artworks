@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMuseoTable extends Migration
+class CreateMuseosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -21,8 +21,8 @@ class CreateMuseoTable extends Migration
             $table->string('web');
             $table->string('social');
             $table->string('type');
-            $table->string('period')->nullable();;
-            $table->text('description')->nullable();;
+            $table->string('period')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

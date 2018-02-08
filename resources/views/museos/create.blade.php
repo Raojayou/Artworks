@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Añadir Museo</div>
+                    <div class="panel-heading">Creación de Museo</div>
 
                     <div class="panel-body">
                         <form action="{{ url('/') }}/museos/create" method="post" class="form-horizontal">

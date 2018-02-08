@@ -6,7 +6,8 @@
     height: 100px;
 }
 .museo{
-    padding: 50px;
+    align-content: center;
+
 }
 ul.navbar-nav {
     padding: 10px;
@@ -14,4 +15,9 @@ ul.navbar-nav {
 
 ul.navbar-nav a {
     padding-left: 40px;
+}
+
+.carousel{
+    width: 250px;
+    height: 250px;
 }

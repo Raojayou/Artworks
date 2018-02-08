@@ -14,10 +14,18 @@ use Faker\Generator as Faker;
 */
 
 $factory->define(App\User::class, function (Faker $faker) {
+
+    $name = $faker->name;
+    $lastName = $faker->lastName;
+    $username = str_replace(" ", ".", $name . "." . $lastName);
+    $usernamedef = str_replace("..", ".", $username);
+
+
+
     return [
-        'name' => $faker->name,
-        'lastName' => $faker->lastName,
-        'username' => $faker->userName,
+        'name' => $name,
+        'lastName' => $lastName,
+        'username' => $usernamedef,
         'email' => $faker->unique()->safeEmail,
         'phone' => $faker->e164PhoneNumber,
         'website' => $faker->url,

@@ -27,11 +27,17 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function museos(){
         // Relación [1 a n].
         return $this->hasMany(Museo::class);
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
     public function profile(){
         return $this->hasOne(User::class);
     }

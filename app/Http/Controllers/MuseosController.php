@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateMuseoRequest;
 use App\Museo;
+use App\User;
 
 use Illuminate\Http\Request;
 
@@ -11,21 +12,23 @@ class MuseosController extends Controller
 {
     /**
      * Método que muestra la información de un mensaje. Utiliza Route Binding
-     * para conseguir el museos facilitado por el parámetro.
+     * para conseguir el museo facilitado por el parámetro.
      *
      * @param Museo $museo
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show(Museo $museo)
+    public function show($id)
     {
-        $museo = Museo::orderBy('created_at', 'desc')->paginate(10);
+        $museo = Museo::find($id);
+
         return view('museos.show', [
-            'museos' => $museo
+            'museo' => $museo,
+
         ]);
     }
     /**
-     * Método para mostrar el formulario de alta de una nuevo museos.
+     * Método para mostrar el formulario de alta de un nuevo museo.
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
@@ -34,7 +37,7 @@ class MuseosController extends Controller
         return view('museos.create');
     }
     /**
-     * Guarda en la base de datos la información facilitada para un nuevo museos.
+     * Guarda en la base de datos la información facilitada para un nuevo museo.
      * Utiliza la definición personalizada de un Request para validar los datos.
      *
      * @param CreateMuseoRequest $request

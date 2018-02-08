@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Museo extends Model
+class Obra extends Model
 {
     /**
      * @var array
