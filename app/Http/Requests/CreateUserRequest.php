@@ -65,11 +65,11 @@ class CreateUserRequest extends FormRequest
             'phone.max' => 'Has sobrepasado los 12 caracteres disponibles para el "móvil".',
             'phone.numeric' => 'El móvil debe ser un móvil válido.',
 
-            'website.unique' => 'La página web debe ser una págin web disponible.',
+            'website.unique' => 'La página web debe ser una página web disponible.',
 
             'about.required' => 'La descripción es obligatoria.',
             'about.string' => 'La descripción debe ser una cadena de caracteres',
-            'about.max' => 'La descripción debe tener 200 caracter como máximo',
+            'about.max' => 'La descripción debe tener 200 caracteres como máximo',
         ];
     }
 }
