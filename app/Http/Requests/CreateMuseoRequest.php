@@ -24,8 +24,8 @@ class CreateMuseoRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:50',
-            'horario_apertura' => 'required',
-            'horario_cierre' => 'required',
+            'horario_apertura' => 'required|numeric',
+            'horario_cierre' => 'required|numeric',
             'web' => 'required',
             'social' => 'required',
             'type' => 'required|string|max:25',
