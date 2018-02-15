@@ -45,10 +45,7 @@
         @include('museos.museo')
 
     </div>
-    </div>
-    <div class="center">
-        <ul class="pagination">
-            {{ $museos->links('pagination::bootstrap-4') }}
-        </ul>
+    <div class="pagination">
+        {{ $museos->links('pagination::bootstrap-4') }}
     </div>
 @endsection

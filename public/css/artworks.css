@@ -1,8 +1,5 @@
-div.center {
-    text-align: center;
-}
-ul.pagination{
-
+.pagination {
+    justify-content: center;
 }
 
 .ng {

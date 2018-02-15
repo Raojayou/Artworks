@@ -17,33 +17,33 @@
 
             <div class="bg-light rounded">
                 <h3>
-                    Nombre de Usuario: {{ $user['username'] }}
+                    Nick: {{ $user['username'] }}
                 </h3>
             </div>
 
-            <div class="bg-light rounded">
-                <h3>
-                    Email: {{ $user['email'] }}
-                </h3>
-            </div>
+            {{--<div class="bg-light rounded">--}}
+                {{--<h3>--}}
+                    {{--Email: {{ $user['email'] }}--}}
+                {{--</h3>--}}
+            {{--</div>--}}
 
-            <div class="bg-light rounded">
-                <h3>
-                    Móvil: {{ $user['phone'] }}
-                </h3>
-            </div>
+            {{--<div class="bg-light rounded">--}}
+                {{--<h3>--}}
+                    {{--Móvil: {{ $user['phone'] }}--}}
+                {{--</h3>--}}
+            {{--</div>--}}
 
-            <div class="bg-light rounded">
-                <h3>
-                    Web: {{ $user['website'] }}
-                </h3>
-            </div>
+            {{--<div class="bg-light rounded">--}}
+                {{--<h3>--}}
+                    {{--Web: {{ $user['website'] }}--}}
+                {{--</h3>--}}
+            {{--</div>--}}
 
-            <div class="bg-light rounded">
-                <h3>
-                    Descripción: {{ $user['about'] }}
-                </h3>
-            </div>
+            {{--<div class="bg-light rounded">--}}
+                {{--<h3>--}}
+                    {{--Descripción: {{ $user['about'] }}--}}
+                {{--</h3>--}}
+            {{--</div>--}}
         </div>
     </div>
 @endsection
