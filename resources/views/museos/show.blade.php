@@ -21,9 +21,6 @@
 
                 <h3 class="card-text">Descripción: {{ $museo['description'] }}</h3>
 
-                {{--<div class="bg-light rounded">--}}
-                    {{--{{ $museo->user->name }}--}}
-                {{--</div>--}}
             </div>
         </div>
     </div>

@@ -66,47 +66,47 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row{{ $errors->has('phone') ? ' has-error' : '' }}">
-                                <label for="phone" class="col-lg-4 col-form-label text-lg-right">Móvil</label>
+                            {{--<div class="form-group row{{ $errors->has('phone') ? ' has-error' : '' }}">--}}
+                                {{--<label for="phone" class="col-lg-4 col-form-label text-lg-right">Móvil</label>--}}
 
-                                <div class="col-md-6">
-                                    <input id="phone" type="text" class="form-control" name="phone" value="{{ old('phone') }}" autofocus>
+                                {{--<div class="col-md-6">--}}
+                                    {{--<input id="phone" type="text" class="form-control" name="phone" value="{{ old('phone') }}" autofocus>--}}
 
-                                    @if ($errors->has('phone'))
-                                        <div class="alert alert-danger">
-                                            <strong>{{ $errors->first('phone') }}</strong>
-                                        </div>
-                                    @endif
-                                </div>
-                            </div>
+                                    {{--@if ($errors->has('phone'))--}}
+                                        {{--<div class="alert alert-danger">--}}
+                                            {{--<strong>{{ $errors->first('phone') }}</strong>--}}
+                                        {{--</div>--}}
+                                    {{--@endif--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
-                            <div class="form-group row{{ $errors->has('website') ? ' has-error' : '' }}">
-                                <label for="website" class="col-lg-4 col-form-label text-lg-right">Sitio Web</label>
+                            {{--<div class="form-group row{{ $errors->has('website') ? ' has-error' : '' }}">--}}
+                                {{--<label for="website" class="col-lg-4 col-form-label text-lg-right">Sitio Web</label>--}}
 
-                                <div class="col-md-6">
-                                    <input id="website" type="text" class="form-control" name="website" value="{{ old('website') }}"  autofocus>
+                                {{--<div class="col-md-6">--}}
+                                    {{--<input id="website" type="text" class="form-control" name="website" value="{{ old('website') }}"  autofocus>--}}
 
-                                    @if ($errors->has('website'))
-                                        <div class="alert alert-danger">
-                                            <strong>{{ $errors->first('website') }}</strong>
-                                        </div>
-                                    @endif
-                                </div>
-                            </div>
+                                    {{--@if ($errors->has('website'))--}}
+                                        {{--<div class="alert alert-danger">--}}
+                                            {{--<strong>{{ $errors->first('website') }}</strong>--}}
+                                        {{--</div>--}}
+                                    {{--@endif--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
-                            <div class="form-group row{{ $errors->has('about') ? ' has-error' : '' }}">
-                                <label for="about" class="col-lg-4 col-form-label text-lg-right">Descripción</label>
+                            {{--<div class="form-group row{{ $errors->has('about') ? ' has-error' : '' }}">--}}
+                                {{--<label for="about" class="col-lg-4 col-form-label text-lg-right">Descripción</label>--}}
 
-                                <div class="col-md-6">
-                                    <input id="about" type="text" class="form-control" name="about" value="{{ old('about') }}"  autofocus>
+                                {{--<div class="col-md-6">--}}
+                                    {{--<input id="about" type="text" class="form-control" name="about" value="{{ old('about') }}"  autofocus>--}}
 
-                                    @if ($errors->has('about'))
-                                        <div class="alert alert-danger">
-                                            <strong>{{ $errors->first('about') }}</strong>
-                                        </div>
-                                    @endif
-                                </div>
-                            </div>
+                                    {{--@if ($errors->has('about'))--}}
+                                        {{--<div class="alert alert-danger">--}}
+                                            {{--<strong>{{ $errors->first('about') }}</strong>--}}
+                                        {{--</div>--}}
+                                    {{--@endif--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
                             <div class="form-group row{{ $errors->has('password') ? ' has-error' : '' }}">
                                 <label for="password" class="col-lg-4 col-form-label text-lg-right">Contraseña</label>
