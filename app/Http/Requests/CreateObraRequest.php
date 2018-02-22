@@ -52,7 +52,7 @@ class CreateObraRequest extends FormRequest
 
             'review.required' => 'Es necesario completar el campo Opinión.',
             'review.string' => 'La Opinión debe ser una cadena de caracteres.',
-            'review.max' => 'Has sobrepasado los 255 caracteres disponibles para el campo Opinión"',
+            'review.max' => 'Has sobrepasado los 255 caracteres disponibles para el campo Opinión',
         ];
     }
 }
