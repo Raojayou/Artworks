@@ -36,16 +36,43 @@
     </div>
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
-            <h1 class="page-header museo" align="center">Museos</h1>
+            <h1 class="page-header museo" align="center">Listado de Museos</h1>
         </div>
     </div>
 
-    <div class="row course-set courses__row event d-flex justify-content-around museo">
+    @forelse($museos->chunk(3) as $chunk)
+        <div class="row course-set courses__row event d-flex justify-content-around museo">
+            @foreach($chunk as $museo)
+                @include('museos.museo')
+            @endforeach
+        </div>
+    @empty
+        <p>No hay museos para mostrar.</p>
 
-        @include('museos.museo')
+    @endforelse
 
-    </div>
     <div class="pagination">
         {{ $museos->links('pagination::bootstrap-4') }}
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <h1 class="page-header obra" align="center">Listado de Obras</h1>
+        </div>
+    </div>
+
+    @forelse($obras->chunk(3) as $chunk)
+        <div class="row course-set courses__row event d-flex justify-content-around obra">
+            @foreach($chunk as $obra)
+                @include('obras.obra')
+            @endforeach
+        </div>
+    @empty
+        <p>No hay obras para mostrar.</p>
+
+    @endforelse
+
+    <div class="pagination">
+        {{ $obras->links('pagination::bootstrap-4') }}
     </div>
 @endsection

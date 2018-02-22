@@ -15,7 +15,7 @@ class UsersController extends Controller
     public function index($username)
     {
         $user = User::where('username',$username)->first();
-        $museos = $user->museos()->latest()->paginate(10);
+        $museos = $user->museos()->latest()->paginate(9);
 
         return view('users.index', [
             'museos' => $museos,

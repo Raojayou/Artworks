@@ -28,8 +28,8 @@ class CreateMuseoRequest extends FormRequest
             'horario_cierre' => 'required|numeric',
             'web' => 'required',
             'social' => 'required',
-            'type' => 'required|string|max:25',
-            'period' => 'required|numeric',
+            'type' => 'required',
+            'period' => 'required',
             'description' => 'required|string|max:255',
         ];
     }
@@ -56,12 +56,8 @@ class CreateMuseoRequest extends FormRequest
             'web.required' => 'Es necesario completar el campo Página Web.',
             'social.required' => 'Es necesario completar el campo Redes Sociales',
 
-            'type.required' => 'Es necesario completar el campo Tipo de Museo',
-            'type.string' => 'El tipo de museos debe ser una cadena de caracteres.',
-            'type.max' => 'Has sobrepasado los 25 caracteres disponibles para el "Tipo de Museo".',
-
-            'period.required' => 'Es necesario completar el campo Época de las Obras.',
-            'period.numeric' => 'La "Época de las Obras" debe ser un número',
+            'type.required' => 'Es necesario seleccionar el campo Tipo de Museo',
+            'period.required' => 'Es necesario seleccionar el campo Época de las Obras.',
 
             'description.required' => 'Es necesario completar el campo Descripción.',
             'description.string' => 'La descripción debe ser una cadena de caracteres.',

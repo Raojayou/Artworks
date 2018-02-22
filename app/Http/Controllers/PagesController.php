@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Museo;
+use App\Obra;
 
 use Illuminate\Http\Request;
 
@@ -14,9 +15,11 @@ class PagesController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function home(){
-        $museos = Museo::orderBy('created_at', 'desc')->paginate(10);
+        $museos = Museo::orderBy('created_at', 'desc')->paginate(9);
+        $obras = Obra::orderBy('created_at', 'desc')->paginate(9);
         return view('home', [
-            'museos' => $museos
+            'museos' => $museos,
+            'obras' => $obras,
         ]);
     }
     /**

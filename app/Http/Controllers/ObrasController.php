@@ -52,6 +52,7 @@ class ObrasController extends Controller
             'name' => $request->input('name'),
             'type' => $request->input('type'),
             'tecnique' => $request->input('tecnique'),
+            'materials' => $request->input('materials'),
             'review' => $request->input('review'),
         ]);
         return redirect('/');

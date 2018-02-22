@@ -24,7 +24,7 @@ class CreateObraRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:50',
-            'type' => 'required|string|max:25',
+            'type' => 'required',
             'tecnique' => 'required',
             'materials' => 'required',
             'review' => 'required|string|max:255',
@@ -42,19 +42,17 @@ class CreateObraRequest extends FormRequest
         return [
             'name.required' => 'Es necesario completar el campo Nombre del Museo.',
             'name.string' => 'El nombre debe ser una cadena de caracteres.',
-            'name.max' => 'Has sobrepasado los 50 caracteres disponibles para el "Nombre".',
+            'name.max' => 'Has sobrepasado los 50 caracteres disponibles para el Nombre.',
 
-            'type.required' => 'Es necesario completar el campo Tipo de Obra',
-            'type.string' => 'El tipo de obra debe ser una cadena de caracteres.',
-            'type.max' => 'Has sobrepasado los 25 caracteres disponibles para el "Tipo de Obra".',
+            'type.required' => 'Es necesario seleccionar el campo Tipo de Obra.',
 
-            'tecnique.required' => 'Es necesario completar el campo Técnica Usada.',
+            'tecnique.required' => 'Es necesario seleccionar el campo Técnicas Usadas.',
 
-            'materials.required' => 'Es necesario completar el campo Materiales Usados.',
+            'materials.required' => 'Es necesario seleccionar el campo Materiales Usados.',
 
             'review.required' => 'Es necesario completar el campo Opinión.',
             'review.string' => 'La Opinión debe ser una cadena de caracteres.',
-            'review.max' => 'Has sobrepasado los 255 caracteres disponibles para la "Opinión".',
+            'review.max' => 'Has sobrepasado los 255 caracteres disponibles para el campo Opinión"',
         ];
     }
 }

@@ -11,7 +11,9 @@
 }
 .museo{
     align-content: center;
-
+}
+.obra{
+    align-content: center;
 }
 ul.navbar-nav {
     padding: 10px;
@@ -24,4 +26,16 @@ ul.navbar-nav a {
 .carousel{
     width: 1200px;
     height: 250px;
+}
+
+.card-body{
+    background-color: #080808;
+}
+
+.card{
+    background-color: #6610f2;
+}
+
+.page-header{
+    background-color: #6610f2;
 }
