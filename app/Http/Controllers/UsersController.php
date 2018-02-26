@@ -15,10 +15,11 @@ class UsersController extends Controller
     public function index($username)
     {
         $user = User::where('username',$username)->first();
-        $museos = $user->museos()->latest()->paginate(9);
+
+        $museo = $user->museos()->latest()->paginate(9);
 
         return view('users.index', [
-            'museos' => $museos,
+            'museo' => $museo,
             'user'   => $user,
         ]);
     }

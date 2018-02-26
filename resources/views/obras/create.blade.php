@@ -89,8 +89,8 @@
                                         <label for="materials" class="col-md-4 control-label">Material Usado</label>
 
                                         <div class="col-md-6">
-                                            <select name="tecnique" class="custom-select custom-select-lg mb-3"
-                                                    id="tecnique" title="Técnicas Usadas">
+                                            <select name="materials" class="custom-select custom-select-lg mb-3"
+                                                    id="materials" title="Material Usado">
                                                 <option selected>Selecciona una opción</option>
                                                 <option value="Madera y derivados">Madera y derivados</option>
                                                 <option value="Metal y derivados">Metal y derivados</option>

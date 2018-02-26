@@ -3,18 +3,22 @@
 }
 
 .ng {
-    font-weight:bold;
+    font-weight: bold;
 }
-.img{
+
+.img {
     width: 150px;
     height: 100px;
 }
-.museo{
+
+.museo {
     align-content: center;
 }
-.obra{
+
+.obra {
     align-content: center;
 }
+
 ul.navbar-nav {
     padding: 10px;
 }
@@ -23,19 +27,44 @@ ul.navbar-nav a {
     padding-left: 40px;
 }
 
-.carousel{
+.carousel {
     width: 1200px;
     height: 250px;
 }
 
-.card-body{
-    background-color: #080808;
+.card-body {
+    background-color: white;
 }
 
-.card{
-    background-color: #6610f2;
+.card {
+    background-color: #F5F5DC;
 }
 
-.page-header{
-    background-color: #6610f2;
+.page-header {
+    background-color: #F5F5DC;
+}
+
+body {
+    background-color: #5a8ddd;
+}
+
+.parallax {
+    background-image: url("https://www.hdwallpapers.in/walls/digital_space_universe_4k_8k-wide.jpg");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#draggable {
+    width: auto;
+    height: auto;
+    padding: auto;
+}
+
+#resizable {
+    width: auto;
+    height: auto;
+    padding: auto;
 }

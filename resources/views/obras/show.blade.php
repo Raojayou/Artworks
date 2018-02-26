@@ -5,10 +5,8 @@
         <div class="col-md-12">
             <div class="card" style="width: 35rem;">
                 <div class="card-body">
-                    <div class="card-header bg-transparent border-primary">
-                        <h3 class="text-center">Nombre: {{ $museo['name'] }}</h3>
-                    </div>
-
+                    <h2 class="card-title text-center">Nombre: {{ $obra['name'] }}</h2>
+                    <hr>
                     <h3 class="card-text">Tipo de Obra: {{ $obra['type'] }} </h3>
                     <hr>
                     <h3 class="card-text">Técnicas Usadas: {{ $obra['tecnique'] }}</h3>

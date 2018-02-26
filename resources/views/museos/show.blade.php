@@ -5,10 +5,8 @@
         <div class="col-md-12">
             <div class="card" style="width: 35rem;">
                 <div class="card-body">
-                    <div class="card-header bg-transparent border-primary">
-                        <h3 class="text-center">Nombre: {{ $museo['name'] }}</h3>
-                    </div>
-
+                    <h2 class="card-header parallax text-center text-white">Nombre: {{ $museo['name'] }}</h2>
+                    <hr>
                     <h3 class="card-text">Horario de Apertura: {{ $museo['horario_apertura'] }} </h3>
                     <hr>
                     <h3 class="card-text">Horario de Cierre: {{ $museo['horario_cierre'] }}</h3>

@@ -20,13 +20,14 @@ class MuseosController extends Controller
      */
     public function show($id)
     {
-        $museo = Museo::find($id);
+        $museo = Museo::where('id', $id)->first();
 
         return view('museos.show', [
             'museo' => $museo,
 
         ]);
     }
+
     /**
      * Método para mostrar el formulario de alta de un nuevo museo.
      *
@@ -36,6 +37,7 @@ class MuseosController extends Controller
     {
         return view('museos.create');
     }
+
     /**
      * Guarda en la base de datos la información facilitada para un nuevo museo.
      * Utiliza la definición personalizada de un Request para validar los datos.
@@ -43,12 +45,13 @@ class MuseosController extends Controller
      * @param CreateMuseoRequest $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function store(CreateMuseoRequest $request){
+    public function store(CreateMuseoRequest $request)
+    {
 
         $user = $request->user();
 
         Museo::create([
-            'user_id'   => $user->id,
+            'user_id' => $user->id,
             'name' => $request->input('name'),
             'horario_apertura' => $request->input('horario_apertura'),
             'horario_cierre' => $request->input('horario_cierre'),

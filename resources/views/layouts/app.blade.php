@@ -13,8 +13,10 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/artworks.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
-<body class="bg-light">
+<body>
 <div id="app">
     <nav class="navbar navbar-expand-lg navbar-light color-fondo">
         <div class="container">
@@ -29,11 +31,16 @@
 
             <div class="collapse navbar-collapse justify-content-start">
                 <ul class="navbar-nav">
-                    
+
                     @auth()
-                        <li class="nav-item active"><a href="{{ url('/') }}/museos/create" class="nav-link">Añadir Museo</a></li>
-                        <li class="nav-item active"><a href="{{ url('/') }}/obras/create" class="nav-link">Añadir Obra</a></li>
+                        <li class="nav-item active"><a href="{{ url('/') }}/museos/create" class="nav-link">Añadir
+                                Museo</a></li>
+                        <li class="nav-item active"><a href="{{ url('/') }}/obras/create" class="nav-link">Añadir
+                                Obra</a></li>
                     @endauth
+                        <div id="dialog" title="Texto Informativo">
+                            <p>Aquí tendremos información esencial para el uso de la página, pulse [x] para cerrar.</p>
+                        </div>
                 </ul>
             </div>
 
@@ -44,7 +51,8 @@
                         <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Registro</a></li>
                     @else
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
+                               data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">
                                 {{ Auth::user()->name }}
                             </a>
@@ -76,5 +84,15 @@
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/draggable.js') }}" defer></script>
+<script src="{{ asset('js/resizable.js') }}" defer></script>
+<script src="{{ asset('js/dialog.js') }}" defer></script>
+<script src="{{ asset('js/autocomplete.js') }}" defer></script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+@stack('scripts')
 </body>
 </html>
