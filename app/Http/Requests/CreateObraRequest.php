@@ -15,6 +15,7 @@ class CreateObraRequest extends FormRequest
     {
         return true;
     }
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -22,14 +23,16 @@ class CreateObraRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'name' => 'required|string|max:50',
-            'type' => 'required',
-            'tecnique' => 'required',
-            'materials' => 'required',
-            'review' => 'required|string|max:255',
-        ];
+        $rules = array();
+        $rules['name'] = $this->validarName();
+        $rules['type'] = $this->validarType();
+        $rules['tecnique'] = $this->validarTecnique();
+        $rules['materials'] = $this->validarWeb();
+        $rules['review'] = $this->validarReview();
+
+        return $rules;
     }
+
     /**
      * Definición de los mensajes de validación.
      *
@@ -37,22 +40,82 @@ class CreateObraRequest extends FormRequest
      */
     public function messages()
     {
-        // Se espeficican los mensajes de validación para las reglas definidas
-        // en el método rules de esta clase.
-        return [
-            'name.required' => 'Es necesario completar el campo Nombre del Museo.',
-            'name.string' => 'El nombre debe ser una cadena de caracteres.',
-            'name.max' => 'Has sobrepasado los 50 caracteres disponibles para el Nombre.',
+        $mensajesName = $this->mensajesName();
+        $mensajesType = $this->mensajesType();
+        $mensajesTecnique = $this->mensajesTecnique();
+        $mensajesMaterials = $this->mensajesMaterials();
+        $mensajesReview = $this->mensajesReview();
+        $mensajes = array_merge(
+            $mensajesName,
+            $mensajesType,
+            $mensajesTecnique,
+            $mensajesMaterials,
+            $mensajesReview
+        );
+        return $mensajes;
+    }
 
-            'type.required' => 'Es necesario seleccionar el campo Tipo de Obra.',
+    protected function validarName()
+    {
+        return 'required|string|max:50';
+    }
 
-            'tecnique.required' => 'Es necesario seleccionar el campo Técnicas Usadas.',
+    protected function mensajesName()
+    {
+        $mensajes = array();
+        $mensajes["name.required"] = 'Es necesario completar el campo Nombre de la Obra.';
+        $mensajes["name.string"] = 'El nombre debe ser una cadena de caracteres.';
+        $mensajes["name.max"] = 'Has sobrepasado los 50 caracteres disponibles para el Nombre de la Obra.';
+        return $mensajes;
+    }
 
-            'materials.required' => 'Es necesario seleccionar el campo Materiales Usados.',
+    protected function validarType()
+    {
+        return 'required';
+    }
 
-            'review.required' => 'Es necesario completar el campo Opinión.',
-            'review.string' => 'La Opinión debe ser una cadena de caracteres.',
-            'review.max' => 'Has sobrepasado los 255 caracteres disponibles para el campo Opinión',
-        ];
+    protected function mensajesType()
+    {
+        $mensajes = array();
+        $mensajes["type.required"] = 'Es necesario seleccionar el campo Tipo de Obra';
+        return $mensajes;
+    }
+
+    protected function validarTecnique()
+    {
+        return 'required';
+    }
+
+    protected function mensajesTecnique()
+    {
+        $mensajes = array();
+        $mensajes["tecnique.required"] = 'Es necesario completar el campo Técnicas Usadas.';
+        return $mensajes;
+    }
+
+    protected function validarMaterials()
+    {
+        return 'required';
+    }
+
+    protected function mensajesMaterials()
+    {
+        $mensajes = array();
+        $mensajes["materials.required"] = 'Es necesario completar el campo Materiales Usados.';
+        return $mensajes;
+    }
+
+    protected function validarReview()
+    {
+        return 'required|string|max:255';
+    }
+
+    protected function mensajesReview()
+    {
+        $mensajes = array();
+        $mensajes["review.required"] = 'Es necesario completar el campo Opinión.';
+        $mensajes["review.string"] = 'La opinión debe ser una cadena de caracteres.';
+        $mensajes["review.max"] = 'Has sobrepasado los 255 caracteres disponibles para el campo Opinión.';
+        return $mensajes;
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateObraAjaxRequest;
 use App\Http\Requests\CreateObraRequest;
 use App\Obra;
 use App\User;
@@ -56,5 +57,9 @@ class ObrasController extends Controller
             'review' => $request->input('review'),
         ]);
         return redirect('/');
+    }
+    protected function validacionAjaxObra(CreateObraAjaxRequest $request)
+    {
+        return array();
     }
 }

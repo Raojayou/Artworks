@@ -18,9 +18,9 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-expand-lg navbar-light color-fondo">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}"><img class="img" src="{{ asset('logo.jpg') }}" id="logo"/></a>
+            <a class="navbar-brand" href="{{ url('/') }}"><img class="img" src="{{ asset('logo.png') }}" id="logo"/></a>
             <a class="navbar-brand" href="{{ url('/') }}">
                 {{ config('app.name', 'Artworks') }}
             </a>
@@ -38,9 +38,9 @@
                         <li class="nav-item active"><a href="{{ url('/') }}/obras/create" class="nav-link">Añadir
                                 Obra</a></li>
                     @endauth
-                        <div id="dialog" title="Texto Informativo">
-                            <p>Aquí tendremos información esencial para el uso de la página, pulse [x] para cerrar.</p>
-                        </div>
+                        {{--<div id="dialog" title="Texto Informativo">--}}
+                            {{--<p>Aquí tendremos información esencial para el uso de la página, pulse [x] para cerrar.</p>--}}
+                        {{--</div>--}}
                 </ul>
             </div>
 
@@ -56,7 +56,7 @@
                                aria-haspopup="true" aria-expanded="false">
                                 {{ Auth::user()->name }}
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                            <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdownMenuLink">
                                 <a href="{{ url('/') }}/profile" class="dropdown-item">
                                     Perfil
                                 </a>

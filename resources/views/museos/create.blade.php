@@ -10,7 +10,8 @@
                             <div class="panel-heading">Creación de Museo</div>
                             <hr>
                             <div class="panel-body">
-                                <form action="{{ url('/') }}/museos/create" method="post" class="form-horizontal">
+                                <form id="crearMuseo" action="{{ url('/') }}/museos/create" method="post"
+                                      class="form-horizontal">
                                     {{ csrf_field() }}
 
                                     <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -177,7 +178,7 @@
 
                                     <div class="form-group">
                                         <div class="col-md-6 col-md-offset-4">
-                                            <button type="submit" class="btn btn-primary">
+                                            <button id="enviarMuseo" type="submit" class="btn btn-primary">
                                                 Añadir Museo
                                             </button>
                                         </div>
@@ -190,4 +191,7 @@
             </div>
         </div>
     </div>
+    @push('scripts')
+        <script src="{{asset ('js/validacionMuseo.js')}}"></script>
+    @endpush
 @endsection

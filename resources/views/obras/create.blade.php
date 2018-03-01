@@ -10,7 +10,7 @@
                             <div class="panel-heading">Creación de Obra</div>
                             <hr>
                             <div class="panel-body">
-                                <form action="{{ url('/') }}/obras/create" method="post" class="form-horizontal">
+                                <form id="crearObra" action="{{ url('/') }}/obras/create" method="post" class="form-horizontal">
                                     {{ csrf_field() }}
 
                                     <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -130,7 +130,7 @@
 
                                     <div class="form-group">
                                         <div class="col-md-6 col-md-offset-4">
-                                            <button type="submit" class="btn btn-primary">
+                                            <button id="enviarObra" type="submit" class="btn btn-primary">
                                                 Añadir Obra
                                             </button>
                                         </div>
@@ -143,4 +143,7 @@
             </div>
         </div>
     </div>
+    @push('scripts')
+        <script src="{{asset ('js/validacionObra.js')}}"></script>
+    @endpush
 @endsection

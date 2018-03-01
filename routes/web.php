@@ -21,9 +21,11 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/museos/create', 'MuseosController@create');
     Route::post('/museos/create', 'MuseosController@store');
+    Route::post('/museos/validar', 'MuseosController@validacionAjaxMuseo');
 
     Route::get('/obras/create', 'ObrasController@create');
     Route::post('/obras/create', 'ObrasController@store');
+    Route::post('/obras/validar', 'ObrasController@validacionAjaxObra');
 
     Route::get('/profile', 'ProfileController@profile');
 });

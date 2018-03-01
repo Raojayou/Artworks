@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateMuseoAjaxRequest;
 use App\Http\Requests\CreateMuseoRequest;
 use App\Museo;
 use App\User;
@@ -62,5 +63,10 @@ class MuseosController extends Controller
             'description' => $request->input('description'),
         ]);
         return redirect('/');
+    }
+
+    protected function validacionAjaxMuseo(CreateMuseoAjaxRequest $request)
+    {
+        return array();
     }
 }

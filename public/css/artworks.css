@@ -7,8 +7,34 @@
 }
 
 .img {
-    width: 150px;
-    height: 100px;
+    width: 60px;
+    height: 50px;
+    background-color: transparent;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* transform: rotate(3deg); */
+    /* transform: rotate(0.3rad);/ */
+    /* transform: rotate(3grad); */
+    /* transform: rotate(.03turn);  */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-toggle{
+    color: white;
 }
 
 .museo {
@@ -45,7 +71,11 @@ ul.navbar-nav a {
 }
 
 body {
-    background-color: #5a8ddd;
+    background: #f6e6b4; /* Old browsers */
+    background: -moz-linear-gradient(top, #f6e6b4 0%, #eab575 88%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f6e6b4 0%, #eab575 88%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f6e6b4 0%, #eab575 88%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6e6b4', endColorstr='#eab575', GradientType=0); /* IE6-9 */
 }
 
 .parallax {

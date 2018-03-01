@@ -36,7 +36,7 @@
     </div>
 
     <div class="row">
-        <div id="draggable" class="col-md-12 col-sm-12 col-xs-12">
+        <div class="col-md-12 col-sm-12 col-xs-12">
             <h1 class="page-header museo" align="center">Listado de Museos</h1>
         </div>
     </div>
