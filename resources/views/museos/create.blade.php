@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-8 col-md-offset-2 text-white">
                 <div class="panel panel-default">
                     <div class="card" style="width: 35rem;">
                         <div class="card-body">
@@ -106,9 +106,9 @@
                                         <label for="type" class="col-md-4 control-label">Tipo de Museo</label>
 
                                         <div class="col-lg-6">
-                                            <select name="type" class="custom-select custom-select-lg mb-3"
+                                            <select name="type" class="custom-select"
                                                     id="type" title="Tipo de Museo">
-                                                <option selected>Selecciona una opción</option>
+                                                <option selected>Ninguno seleccionado</option>
                                                 <option value="Antropológico">Antropológico</option>
                                                 <option value="Arqueológico">Arqueológico</option>
                                                 <option value="Arquitectura">Arquitectura</option>
@@ -139,9 +139,9 @@
                                         <label for="period" class="col-md-4 control-label">Época de las Obras</label>
 
                                         <div class="col-md-6">
-                                            <select name="period" class="custom-select custom-select-lg mb-3"
+                                            <select name="period" class="custom-select"
                                                     id="period" title="Época de las Obras">
-                                                <option selected>Selecciona una opción</option>
+                                                <option selected>Ninguna seleccionada</option>
                                                 <option value="Prehistoria">Prehistoria</option>
                                                 <option value="Edad Antigua">Edad Antigua</option>
                                                 <option value="Edad Media">Edad Media</option>

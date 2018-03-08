@@ -16,10 +16,10 @@ class UsersController extends Controller
     {
         $user = User::where('username',$username)->first();
 
-        $museo = $user->museos()->latest()->paginate(9);
+        $museos = $user->museos()->latest()->paginate(9);
 
         return view('users.index', [
-            'museo' => $museo,
+            'museos' => $museos,
             'user'   => $user,
         ]);
     }

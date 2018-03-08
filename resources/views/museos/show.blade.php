@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="card-group row course-set courses__row museo">
+    <div class="card-group row course-set courses__row museo text-white">
         <div class="col-md-12">
             <div class="card" style="width: 35rem;">
                 <div class="card-body">

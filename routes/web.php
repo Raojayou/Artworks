@@ -15,6 +15,7 @@ Route::get('/', 'PagesController@home');
 
 Route::get('/museos/show/{museos}', 'MuseosController@show');
 Route::get('/obras/show/{obras}', 'ObrasController@show');
+Route::get('/user/{user}', 'UsersController@index');
 
 Auth::routes();
 
@@ -30,5 +31,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/profile', 'ProfileController@profile');
 });
 
-Route::get('/user/{user}', 'UsersController@index');
 Route::get('/home', 'HomeController@index')->name('home');

@@ -18,7 +18,7 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand navbar-dark flex-column flex-md-row bg-navbar">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}"><img class="img" src="{{ asset('logo.png') }}" id="logo"/></a>
             <a class="navbar-brand" href="{{ url('/') }}">
@@ -33,30 +33,37 @@
                 <ul class="navbar-nav">
 
                     @auth()
-                        <li class="nav-item active"><a href="{{ url('/') }}/museos/create" class="nav-link">Añadir
+                        <li class="nav-item active btn-group my-2 my-sm-0"><a
+                                    href="{{ url('/') }}/museos/create" class="nav-link">Añadir
                                 Museo</a></li>
-                        <li class="nav-item active"><a href="{{ url('/') }}/obras/create" class="nav-link">Añadir
+                        <li class="nav-item active btn-group my-2 my-sm-0"><a
+                                    href="{{ url('/') }}/obras/create" class="nav-link">Añadir
                                 Obra</a></li>
                     @endauth
-                        {{--<div id="dialog" title="Texto Informativo">--}}
-                            {{--<p>Aquí tendremos información esencial para el uso de la página, pulse [x] para cerrar.</p>--}}
-                        {{--</div>--}}
+                    {{--<div id="dialog" title="Texto Informativo">--}}
+                    {{--<p>Aquí tendremos información esencial para el uso de la página, pulse [x] para cerrar.</p>--}}
+                    {{--</div>--}}
                 </ul>
             </div>
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     @if (Auth::guest())
-                        <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
-                        <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Registro</a></li>
+                        <li class="nav-item btn btn-outline my-2 my-sm-0"><a href="{{ route('login') }}"
+                                                                                       class="nav-link">Login</a></li>
+                        <li class="nav-item btn btn-outline my-2 my-sm-0"><a href="{{ route('register') }}"
+                                                                                       class="nav-link">Registro</a>
+                        </li>
                     @else
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
+                            <a href="#" class="nav-link dropdown-toggle btn btn-outline my-2 my-sm-0"
+                               id="navbarDropdownMenuLink"
                                data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">
                                 {{ Auth::user()->name }}
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                            <div class="dropdown-menu dropdown-menu-right btn btn-outline my-2 my-sm-0"
+                                 aria-labelledby="navbarDropdownMenuLink">
                                 <a href="{{ url('/') }}/profile" class="dropdown-item">
                                     Perfil
                                 </a>

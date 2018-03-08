@@ -53,9 +53,9 @@ class RegisterController extends Controller
             'username' => 'required|string|max:50',
             'password' => 'required|min:6|max:50|confirmed',
             'email' => 'required|string|email|max:50|unique:users',
-//            'phone' => 'required|string|min:9|max:12',
-//            'website' => 'required|string|max:50',
-//            'about' => 'required|string|max:200',
+            'phone' => 'required|string|min:9|max:12',
+            'website' => 'required|string|max:50',
+            'about' => 'required|string|max:200',
         ],[
             'name.required' => 'Es necesario completar el campo "Nombre".',
             'name.max' => 'Has sobrepasado los 50 caracteres disponibles para el "Nombre".',
@@ -74,15 +74,15 @@ class RegisterController extends Controller
             'email.email' => 'El email debe ser un E-mail válido.',
             'email.unique' => 'El email debe ser un E-mail disponible.',
 
-//            'phone.required' => 'Es necesario completar el campo "Móvil".',
-//            'phone.max' => 'Has sobrepasado los 12 caracteres disponibles para el "Móvil".',
-//            'phone.numeric' => 'El "Móvil" debe ser un móvil válido.',
+            'phone.required' => 'Es necesario completar el campo "Móvil".',
+            'phone.max' => 'Has sobrepasado los 12 caracteres disponibles para el "Móvil".',
+            'phone.numeric' => 'El "Móvil" debe ser un móvil válido.',
 
-//            'website.unique' => 'La página web debe ser una página web disponible.',
-//
-//            'about.required' => 'La descripción es obligatoria.',
-//            'about.string' => 'La descripción debe ser una cadena de caracteres',
-//            'about.max' => 'La descripción debe tener 200 caracteres como máximo',
+            'website.unique' => 'La página web debe ser una página web disponible.',
+
+            'about.required' => 'La descripción es obligatoria.',
+            'about.string' => 'La descripción debe ser una cadena de caracteres',
+            'about.max' => 'La descripción debe tener 200 caracteres como máximo',
         ]);
     }
 
@@ -100,9 +100,9 @@ class RegisterController extends Controller
             'username' => $data['username'],
             'password' => bcrypt($data['password']),
             'email' => $data['email'],
-//            'phone' => $data['phone'],
-//            'website' => $data['website'],
-//            'about' => $data['about'],
+            'phone' => $data['phone'],
+            'website' => $data['website'],
+            'about' => $data['about'],
         ]);
     }
 }

@@ -6,6 +6,16 @@
     font-weight: bold;
 }
 
+.bg-navbar {
+    background-color: #1D0D17;
+}
+
+.btn-outline {
+    background-color: #5B4283;
+    color: #5B4283;
+    border-color: #5B4283;
+}
+
 .img {
     width: 60px;
     height: 50px;
@@ -58,16 +68,30 @@ ul.navbar-nav a {
     height: 250px;
 }
 
-.card-body {
-    background-color: white;
+.card {
+    background-image: url("../imagenes/borde.jpg");
+
+    background-position: center;
+    background-size: auto;
 }
 
-.card {
-    background-color: #F5F5DC;
+.card-header {
+    background-image: url("../imagenes/borde-tumbado.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.card-body {
+    background-color: #1D0D17;
 }
 
 .page-header {
-    background-color: #F5F5DC;
+    background-image: url("../imagenes/borde-tumbado.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 body {
@@ -79,10 +103,11 @@ body {
     background: -ms-linear-gradient(-45deg, rgba(63, 47, 83, 1) 0%, rgba(63, 47, 83, 1) 12%, rgba(90, 29, 45, 1) 34%, rgba(121, 45, 61, 1) 51%, rgba(165, 65, 71, 1) 69%, rgba(32, 19, 28, 1) 90%, rgba(32, 19, 28, 1) 100%); /* IE 10+ */
     background: linear-gradient(135deg, rgba(63, 47, 83, 1) 0%, rgba(63, 47, 83, 1) 12%, rgba(90, 29, 45, 1) 34%, rgba(121, 45, 61, 1) 51%, rgba(165, 65, 71, 1) 69%, rgba(32, 19, 28, 1) 90%, rgba(32, 19, 28, 1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3f2f53', endColorstr='#20131c', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+    background-attachment: fixed;
 }
 
 .parallax {
-    background-image: url("https://www.hdwallpapers.in/walls/digital_space_universe_4k_8k-wide.jpg");
+    background-image: url("../imagenes/fondo.jpg");
 
     background-attachment: fixed;
     background-position: center;

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="text-center">
+    <div class="text-center text-white">
         <h1>Museos creados por {{ $user['username'] }}</h1>
     </div>
 
