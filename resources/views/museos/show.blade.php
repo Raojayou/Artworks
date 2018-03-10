@@ -5,6 +5,8 @@
         <div class="col-md-12">
             <div class="card" style="width: 35rem;">
                 <div class="card-body">
+                    <img src="https://picsum.photos/300/300/?random" border="0" class="image-responsive" alt="Null">
+
                     <h2 class="card-header parallax text-center text-white">Nombre: {{ $museo['name'] }}</h2>
                     <hr>
                     <h3 class="card-text">Horario de Apertura: {{ $museo['horario_apertura'] }} </h3>

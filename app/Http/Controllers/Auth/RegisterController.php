@@ -78,15 +78,17 @@ class RegisterController extends Controller
             'phone.max' => 'Has sobrepasado los 12 caracteres disponibles para el "Móvil".',
             'phone.numeric' => 'El "Móvil" debe ser un móvil válido.',
 
+            'website.required' => 'La página web es obligatoria.',
             'website.unique' => 'La página web debe ser una página web disponible.',
 
             'about.required' => 'La descripción es obligatoria.',
             'about.string' => 'La descripción debe ser una cadena de caracteres',
             'about.max' => 'La descripción debe tener 200 caracteres como máximo',
 
-            'password.required' => 'El password de usuario es obligatorio.',
-            'password.string' => 'El password debe ser una cadena de caracteres',
-            'password.max' => 'El nombre debe tener 6 caracteres como máximo',
+            'password.required' => 'El campo contraseña es obligatorio.',
+            'password.string' => 'El campo contraseña debe ser una cadena de caracteres',
+            'password.min' => 'El campo contraseña debe tener 6 caracteres como mínimo',
+            'password.max' => 'El campo contraseña debe tener 50 caracteres como máximo',
             'password.confirmed' => 'Las contraseñas no coinciden'
         ]);
     }

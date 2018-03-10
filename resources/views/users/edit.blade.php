@@ -30,7 +30,7 @@
                         </tbody>
                     </table>
                     <br>
-                    <div class="small-12 medium-8 cell">
+                    <div class="col parallax rounded">
                         @if( session('exito') )
                             <div class="callout primary">
                                 <h5>Actualización correcta</h5>

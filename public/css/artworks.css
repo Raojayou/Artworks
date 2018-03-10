@@ -52,8 +52,9 @@
 }
 
 .image-responsive {
-    height: auto;
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
 }
 
 .dropdown-item {
@@ -74,6 +75,8 @@
 
 ul.navbar-nav {
     padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
 }
 
 ul.navbar-nav a {
