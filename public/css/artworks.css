@@ -16,6 +16,18 @@
     border-color: #5B4283;
 }
 
+.bg-color{
+    background-color: #792D3D;
+    color: #792D3D;
+    border-color: #792D3D;
+}
+
+.bg-red{
+    background-color: #990005;
+    color: #990005;
+    border-color: #990005;
+}
+
 .img {
     width: 60px;
     height: 50px;
@@ -37,6 +49,11 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+.image-responsive {
+    height: auto;
+    width: 100%;
 }
 
 .dropdown-item {

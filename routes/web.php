@@ -31,11 +31,15 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/obras/validar', 'ObrasController@validacionAjaxObra');
 
     Route::get('/profile/edit', 'UsersController@profile');
+
     Route::get('/profile/account', 'UsersController@edit')->name('profile.account');
     Route::patch('/profile/account', 'UsersController@update');
+
     Route::get('/profile/password', 'UsersController@edit')->name('profile.password');
     Route::patch('/profile/password', 'UsersController@update');
+
     Route::get('/profile/avatar', 'UsersController@edit')->name('profile.avatar');
+
     Route::get('/profile/delete', 'UsersController@edit')->name('profile.delete');
     Route::delete('/profile/delete', 'UsersController@destroy');
 });

@@ -15,13 +15,14 @@ class CreateMuseosTable extends Migration
     {
         Schema::create('museos', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('image');
             $table->string('name')->unique();
             $table->time('horario_apertura');
             $table->time('horario_cierre');
-            $table->string('web');
-            $table->string('social');
+            $table->string('web')->nullable();
+            $table->string('social')->nullable();
             $table->string('type');
-            $table->string('period')->nullable();
+            $table->string('period');
             $table->text('description')->nullable();
             $table->timestamps();
         });

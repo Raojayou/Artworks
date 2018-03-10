@@ -4,6 +4,8 @@
             <div class="card col-md-3 row">
                 <div class="card-body">
                     <div class="bg-light rounded">
+                        <img src="https://picsum.photos/300/300/?random" border="0" class="image-responsive" alt="Null">
+
                         <div class="card-header parallax text-white">
                             Museo:
                             <a href="/museos/show/{{ $museo['id'] }}"> {{ $museo['name'] }}</a>

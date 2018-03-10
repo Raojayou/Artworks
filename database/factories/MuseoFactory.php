@@ -9,6 +9,7 @@ $factory->define(App\Museo::class, function (Faker $faker) {
     $time2 = Carbon::createFromTimestamp($faker->dateTimeThisDecade()->getTimestamp());
 
     return [
+        'image'=> 'https://picsum.photos/150/150/?random',
         'name' =>$faker->unique()->domainWord,
         'horario_apertura'=> $faker->unique()->time($format = 'H:i', $max = 'now'),
         'horario_cierre'=> $faker->unique()->time($format = 'H:i', $max = 'now'),

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UpdateUserRequest;
@@ -16,15 +17,16 @@ class UsersController extends Controller
      */
     public function index($username)
     {
-        $user = User::where('username',$username)->first();
+        $user = User::where('username', $username)->first();
 
         $museos = $user->museos()->latest()->paginate(9);
 
         return view('users.index', [
             'museos' => $museos,
-            'user'   => $user,
+            'user' => $user,
         ]);
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -34,30 +36,33 @@ class UsersController extends Controller
     {
         //
     }
+
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
         //
     }
+
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
         //
     }
+
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit()
@@ -66,6 +71,7 @@ class UsersController extends Controller
 
         return view('users.edit', ['user' => $user]);
     }
+
     /**
      * Update the specified resource in storage.
      *
@@ -77,24 +83,26 @@ class UsersController extends Controller
         $path = $request->path();
         $user = Auth::user();
         //dd( array_filter($request->all()) );
-        if( strpos($path, 'account')) {
+        if (strpos($path, 'account')) {
             $data = array_filter($request->all());
             $user = User::findOrFail($user->id);
             $user->fill($data);
-        }elseif ( strpos($path, 'password') ){
-            if( ! Hash::check($request->get('current_password'), $user->password ) ){
+        } elseif (strpos($path, 'password')) {
+            if (!Hash::check($request->get('current_password'), $user->password)) {
                 return redirect()->back()->with('error', 'La constraseña actual no es correcta');
             }
-            if( strcmp($request->get('current_password'), $request->get('password')) == 0){
+            if (strcmp($request->get('current_password'), $request->get('password')) == 0) {
                 return redirect()->back()->with('error', 'La nueva contraseña debe ser diferente de la antigua.');
             }
             $user->password = bcrypt($request->get('password'));
         }
         $user->save();
+
         return redirect()
             ->route('profile.account')
             ->with('exito', 'Datos actualizados');
     }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -104,8 +112,10 @@ class UsersController extends Controller
     {
         $user = Auth::user();
         $user->delete();
+
         return redirect()->route('home');
     }
+
     /**
      * Muestra el perfil del usuario
      *

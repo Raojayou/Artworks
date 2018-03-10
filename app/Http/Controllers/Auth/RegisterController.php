@@ -83,6 +83,11 @@ class RegisterController extends Controller
             'about.required' => 'La descripción es obligatoria.',
             'about.string' => 'La descripción debe ser una cadena de caracteres',
             'about.max' => 'La descripción debe tener 200 caracteres como máximo',
+
+            'password.required' => 'El password de usuario es obligatorio.',
+            'password.string' => 'El password debe ser una cadena de caracteres',
+            'password.max' => 'El nombre debe tener 6 caracteres como máximo',
+            'password.confirmed' => 'Las contraseñas no coinciden'
         ]);
     }
 
@@ -95,6 +100,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
+            'avatar' => 'https://picsum.photos/150/150/?random',
             'name' => $data['name'],
             'lastName' => $data['lastName'],
             'username' => $data['username'],
