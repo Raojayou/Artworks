@@ -20,6 +20,8 @@ Route::get('/user/{user}', 'UsersController@index');
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
+    Route::redirect('/profile', '/profile/account', 302);
+
     Route::get('/museos/create', 'MuseosController@create');
     Route::post('/museos/create', 'MuseosController@store');
     Route::post('/museos/validar', 'MuseosController@validacionAjaxMuseo');
@@ -28,7 +30,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/obras/create', 'ObrasController@store');
     Route::post('/obras/validar', 'ObrasController@validacionAjaxObra');
 
-    Route::get('/profile', 'ProfileController@profile');
+    Route::get('/profile/edit', 'UsersController@profile');
+    Route::get('/profile/account', 'UsersController@edit')->name('profile.account');
+    Route::patch('/profile/account', 'UsersController@update');
+    Route::get('/profile/password', 'UsersController@edit')->name('profile.password');
+    Route::patch('/profile/password', 'UsersController@update');
+    Route::get('/profile/avatar', 'UsersController@edit')->name('profile.avatar');
+    Route::get('/profile/delete', 'UsersController@edit')->name('profile.delete');
+    Route::delete('/profile/delete', 'UsersController@destroy');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

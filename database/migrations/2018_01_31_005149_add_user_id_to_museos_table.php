@@ -15,7 +15,7 @@ class AddUserIdToMuseosTable extends Migration
     {
         Schema::table('museos', function (Blueprint $table) {
             $table->integer('user_id')->unsigned()->after('id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
