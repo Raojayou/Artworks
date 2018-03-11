@@ -7,6 +7,8 @@
                 <div class="card-body">
                     <div class="info-user">
                         <h1>Museos creados por {{ $user['username'] }}</h1>
+                        <p>Avatar del usuario</p>
+                        <img src="{{ $user['avatar'] }}" width="250" height="250">
                     </div>
                 </div>
             </div>

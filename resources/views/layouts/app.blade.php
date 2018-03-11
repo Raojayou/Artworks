@@ -20,7 +20,7 @@
 <div id="app">
     <nav class="navbar navbar-expand navbar-dark flex-column flex-md-row bg-navbar">
         <div class="container">
-            {{--<a class="navbar-brand" href="{{ url('/') }}"><img class="img" src="{{ asset('logo.png') }}" id="logo"/></a>--}}
+            <a class="navbar-brand" href="{{ url('/') }}"><img class="img" src="{{ asset('favicon.ico') }}" id="logo"/></a>
             <a class="navbar-brand" href="{{ url('/') }}">
                 {{ config('app.name', 'Artworks') }}
             </a>

@@ -47,6 +47,8 @@
                                 @include('users.partials.account')
                             @elseif( Request::is('profile/password') )
                                 @include('users.partials.password')
+                            @elseif( Request::is('profile/avatar') )
+                                @include('users.partials.avatar')
                             @elseif( Request::is('profile/delete') )
                                 @include('users.partials.delete')
                             @endif
