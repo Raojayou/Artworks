@@ -5,9 +5,14 @@ use \Carbon\Carbon;
 
 $factory->define(App\Museo::class, function (Faker $faker) {
 
+    /**
+     * Ordena de más reciente a más antiguo.
+     */
     $time1 = Carbon::createFromTimestamp($faker->dateTimeThisDecade()->getTimestamp());
     $time2 = Carbon::createFromTimestamp($faker->dateTimeThisDecade()->getTimestamp());
-
+    /**
+     * Datos que rellena el faker.
+     */
     return [
         'image'=> 'https://picsum.photos/150/150/?random',
         'name' =>$faker->unique()->domainWord,

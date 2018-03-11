@@ -5,8 +5,15 @@ use App\Http\Requests\CreateObraRequest;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Validation\ValidationException;
 
+/**
+ * Class CreateObraAjaxRequest
+ * @package App\Http\Requests
+ */
 class CreateObraAjaxRequest extends CreateObraRequest
 {
+    /**
+     * @return array
+     */
     public function rules()
     {
         $rules = array();
@@ -27,6 +34,11 @@ class CreateObraAjaxRequest extends CreateObraRequest
         }
         return $rules;
     }
+
+    /**
+     * @param \Illuminate\Contracts\Validation\Validator $validator
+     * @throws ValidationException
+     */
     protected function failedValidation($validator)
     {
         $errors = $validator->errors();

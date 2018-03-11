@@ -13,12 +13,14 @@
 
 Route::get('/', 'PagesController@home');
 
+// Rutas al no estar logueado.
 Route::get('/museos/show/{museos}', 'MuseosController@show');
 Route::get('/obras/show/{obras}', 'ObrasController@show');
 Route::get('/user/{user}', 'UsersController@index');
 
 Auth::routes();
 
+//Rutas al estar logueado.
 Route::group(['middleware' => 'auth'], function () {
     Route::redirect('/profile', '/profile/account', 302);
 

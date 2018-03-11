@@ -2,6 +2,10 @@
 namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Class UpdateUserRequest
+ * @package App\Http\Requests
+ */
 class UpdateUserRequest extends FormRequest
 {
     /**

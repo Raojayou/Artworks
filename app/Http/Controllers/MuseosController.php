@@ -9,6 +9,10 @@ use App\User;
 
 use Illuminate\Http\Request;
 
+/**
+ * Class MuseosController
+ * @package App\Http\Controllers
+ */
 class MuseosController extends Controller
 {
     /**
@@ -65,6 +69,10 @@ class MuseosController extends Controller
         return redirect('/');
     }
 
+    /**
+     * @param CreateMuseoAjaxRequest $request
+     * @return array
+     */
     protected function validacionAjaxMuseo(CreateMuseoAjaxRequest $request)
     {
         return array();

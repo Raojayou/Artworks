@@ -14,14 +14,17 @@ use Faker\Generator as Faker;
 */
 
 $factory->define(App\User::class, function (Faker $faker) {
-
+    /**
+     * Nombre, Apellido y los ordena añadiendole un punto. (Nombre.Apellido)
+     */
     $name = $faker->name;
     $lastName = $faker->lastName;
     $username = str_replace(" ", ".", $name . "." . $lastName);
     $usernamedef = str_replace("..", ".", $username);
 
-
-
+    /**
+     * Información que rellena el faker.
+     */
     return [
         'name' => $name,
         'lastName' => $lastName,

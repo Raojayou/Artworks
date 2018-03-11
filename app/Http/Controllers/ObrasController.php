@@ -9,6 +9,10 @@ use App\User;
 
 use Illuminate\Http\Request;
 
+/**
+ * Class ObrasController
+ * @package App\Http\Controllers
+ */
 class ObrasController extends Controller
 {
     /**
@@ -58,6 +62,11 @@ class ObrasController extends Controller
         ]);
         return redirect('/');
     }
+
+    /**
+     * @param CreateObraAjaxRequest $request
+     * @return array
+     */
     protected function validacionAjaxObra(CreateObraAjaxRequest $request)
     {
         return array();

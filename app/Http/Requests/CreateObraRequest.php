@@ -4,6 +4,10 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Class CreateObraRequest
+ * @package App\Http\Requests
+ */
 class CreateObraRequest extends FormRequest
 {
     /**
@@ -55,11 +59,17 @@ class CreateObraRequest extends FormRequest
         return $mensajes;
     }
 
+    /**
+     * @return string
+     */
     protected function validarName()
     {
         return 'required|string|max:50';
     }
 
+    /**
+     * @return array
+     */
     protected function mensajesName()
     {
         $mensajes = array();
@@ -69,11 +79,17 @@ class CreateObraRequest extends FormRequest
         return $mensajes;
     }
 
+    /**
+     * @return string
+     */
     protected function validarType()
     {
         return 'required';
     }
 
+    /**
+     * @return array
+     */
     protected function mensajesType()
     {
         $mensajes = array();
@@ -81,11 +97,17 @@ class CreateObraRequest extends FormRequest
         return $mensajes;
     }
 
+    /**
+     * @return string
+     */
     protected function validarTecnique()
     {
         return 'required';
     }
 
+    /**
+     * @return array
+     */
     protected function mensajesTecnique()
     {
         $mensajes = array();
@@ -93,11 +115,17 @@ class CreateObraRequest extends FormRequest
         return $mensajes;
     }
 
+    /**
+     * @return string
+     */
     protected function validarMaterials()
     {
         return 'required';
     }
 
+    /**
+     * @return array
+     */
     protected function mensajesMaterials()
     {
         $mensajes = array();
@@ -105,11 +133,17 @@ class CreateObraRequest extends FormRequest
         return $mensajes;
     }
 
+    /**
+     * @return string
+     */
     protected function validarReview()
     {
         return 'required|string|max:255';
     }
 
+    /**
+     * @return array
+     */
     protected function mensajesReview()
     {
         $mensajes = array();

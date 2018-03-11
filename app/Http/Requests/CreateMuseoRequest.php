@@ -4,6 +4,10 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Class CreateMuseoRequest
+ * @package App\Http\Requests
+ */
 class CreateMuseoRequest extends FormRequest
 {
     /**
@@ -64,11 +68,17 @@ class CreateMuseoRequest extends FormRequest
         return $mensajes;
     }
 
+    /**
+     * @return string
+     */
     protected function validarName()
     {
         return 'required|string|max:50';
     }
 
+    /**
+     * @return array
+     */
     protected function mensajesName()
     {
         $mensajes = array();
@@ -78,11 +88,17 @@ class CreateMuseoRequest extends FormRequest
         return $mensajes;
     }
 
+    /**
+     * @return string
+     */
     protected function validarHorarioApertura()
     {
         return 'required|numeric';
     }
 
+    /**
+     * @return array
+     */
     protected function mensajesHorarioApertura()
     {
         $mensajes = array();
@@ -91,11 +107,17 @@ class CreateMuseoRequest extends FormRequest
         return $mensajes;
     }
 
+    /**
+     * @return string
+     */
     protected function validarHorarioCierre()
     {
         return 'required|numeric';
     }
 
+    /**
+     * @return array
+     */
     protected function mensajesHorarioCierre()
     {
         $mensajes = array();
@@ -104,11 +126,17 @@ class CreateMuseoRequest extends FormRequest
         return $mensajes;
     }
 
+    /**
+     * @return string
+     */
     protected function validarWeb()
     {
         return 'required';
     }
 
+    /**
+     * @return array
+     */
     protected function mensajesWeb()
     {
         $mensajes = array();
@@ -116,11 +144,17 @@ class CreateMuseoRequest extends FormRequest
         return $mensajes;
     }
 
+    /**
+     * @return string
+     */
     protected function validarSocial()
     {
         return 'required';
     }
 
+    /**
+     * @return array
+     */
     protected function mensajesSocial()
     {
         $mensajes = array();
@@ -128,11 +162,17 @@ class CreateMuseoRequest extends FormRequest
         return $mensajes;
     }
 
+    /**
+     * @return string
+     */
     protected function validarType()
     {
         return 'required';
     }
 
+    /**
+     * @return array
+     */
     protected function mensajesType()
     {
         $mensajes = array();
@@ -140,11 +180,17 @@ class CreateMuseoRequest extends FormRequest
         return $mensajes;
     }
 
+    /**
+     * @return string
+     */
     protected function validarPeriod()
     {
         return 'required';
     }
 
+    /**
+     * @return array
+     */
     protected function mensajesPeriod()
     {
         $mensajes = array();
@@ -152,11 +198,17 @@ class CreateMuseoRequest extends FormRequest
         return $mensajes;
     }
 
+    /**
+     * @return string
+     */
     protected function validarDescription()
     {
         return 'required|string|max:255';
     }
 
+    /**
+     * @return array
+     */
     protected function mensajesDescription()
     {
         $mensajes = array();

@@ -1,3 +1,7 @@
+<?php
+//abort(500) (prueba para mostrar el error 500)
+
+
 @extends('layouts.app')
 
 @section('content')

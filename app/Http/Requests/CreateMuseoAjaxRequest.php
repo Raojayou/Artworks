@@ -5,8 +5,15 @@ use App\Http\Requests\CreateMuseoRequest;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Validation\ValidationException;
 
+/**
+ * Class CreateMuseoAjaxRequest
+ * @package App\Http\Requests
+ */
 class CreateMuseoAjaxRequest extends CreateMuseoRequest
 {
+    /**
+     * @return array
+     */
     public function rules()
     {
         $rules = array();
@@ -36,6 +43,11 @@ class CreateMuseoAjaxRequest extends CreateMuseoRequest
         }
         return $rules;
     }
+
+    /**
+     * @param \Illuminate\Contracts\Validation\Validator $validator
+     * @throws ValidationException
+     */
     protected function failedValidation($validator)
     {
         $errors = $validator->errors();

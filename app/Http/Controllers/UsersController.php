@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
+/**
+ * Class UsersController
+ * @package App\Http\Controllers
+ */
 class UsersController extends Controller
 {
     /**
