@@ -166,8 +166,5 @@ _Draggable.js_
 
 _Resizable.js_
 
-<<<<<<< HEAD
-_Todos los componentes necesarios para el funcionamiento correcto de Bootstrap v4.0._
-=======
-_Todos los componentes necesarios para el funcionamiento correcto de Bootstrap v4.0._
->>>>>>> fd476e7617955e1797da712810d01823dd0f0438
+_Componentes básicos para el funcionamiento de Bootstrap v4.0._
+
