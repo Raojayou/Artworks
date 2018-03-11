@@ -3,7 +3,7 @@ Proyecto basado en un gestor de museos y obras de arte realizado en Laravel 5.5 
 
 **Instalación**
 
-Para poder usar la aplicacion es necesario que instale previamente PHP, Composer , Vagrant , Virtualbox y Node.js.
+Para poder usar la aplicacion es necesario instalar PHP, Composer , Vagrant , Virtualbox y Node.js.
 
 **PHP**
 
@@ -33,7 +33,7 @@ Link para instalar _homestead:_ https://laravel.com/docs/5.5/homestead
 
 https://medium.com/eaimanshoshi/i-am-going-to-write-down-step-by-step-procedure-to-setup-homestead-for-laravel-5-2-17491a423aa
 
-Una vez que se hayan completado todos los pasos, procedemos a descargarnos el proyecto en la carpeta que haya usted determinado para los proyectos Homestead.
+Una vez que se hayan completado todos los pasos, descargamos/clonamos el proyecto desde github en la carpeta que haya usted determinado para los proyectos Homestead.
 
 _git clone https://github.com/Raojayou/Artworks.git_
 
@@ -57,17 +57,17 @@ En _Linux_ se encuentra en: etc/hosts
 
 ![alt text](https://i.imgur.com/i3PjTJB.png)
 
-Una vez realizados todos estos pasos, nos dispondremos a encender la máquina virtual, al añadir una base de datos, será necesario utilizar el siguiente comando en la carpeta de _Homestead:_
+Una vez realizados todos estos pasos, encendemos la máquina virtual, al añadir una base de datos, será necesario utilizar el siguiente comando en la carpeta de _Homestead:_
 
 _vagrant up --provision_
 
-El resto de ocasiones que queramos iniciar vagrant, será necesario utilizar sólo este comando:
+El resto de veces que queramos iniciar vagrant, será necesario utilizar sólo este comando:
 
 _vagrant up_
 
 **.env**
 
-Una vez realizado todos estos pasos, nos faltará configurar el archivo _.env_ del proyecto **Artworks.** 
+Una vez realizado estos pasos, nos faltará configurar el archivo _.env_ del proyecto **Artworks.** 
 
 Para ello podemos renombramos el archivo _.env.example_ o creamos un archivo _.env_, en cualquier caso, la configuración deberá ser así:
 
@@ -93,7 +93,7 @@ _composer install_
 
 _npm run dev_
 
-Una vez que estemos conectados a la _Base de Datos_ y todos los componentes estén ya instalados, el usuario podrá utilizar el siguiente comando en el proyecto, este comando creará datos para la base de datos usando factorías, con información generada aleatoriamente con **$faker**.
+Una vez que estemos conectados a la _Base de Datos_ y todos los componentes estén ya instalados, el usuario podrá utilizar el siguiente comando en el proyecto, este comando creará datos usando factorías, con información generada aleatoriamente con **$faker**.
 
 _php artisan migrate:refresh --seed_
 
